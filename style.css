@@ -1,0 +1,157 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  background:#000;
+  color:#fff;
+  font-family:'Poppins',sans-serif;
+  overflow:hidden;
+  height:100vh;
+}
+
+/* Opening Screen */
+#start-screen{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:#000;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index:1000;
+}
+
+#start-btn{
+  padding:18px 35px;
+  border:none;
+  border-radius:50px;
+  font-size:20px;
+  background:#ff4fa0;
+  color:#fff;
+  cursor:pointer;
+  box-shadow:
+  0 0 20px #ff4fa0,
+  0 0 40px #ff4fa0;
+}
+
+/* Screens */
+.screen{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100vh;
+  display:none;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  padding:20px;
+  text-align:center;
+}
+
+.active{
+  display:flex;
+}
+
+/* Title */
+h1{
+  font-size:3rem;
+  color:#fff;
+  text-shadow:
+  0 0 20px #ff4fa0,
+  0 0 50px #ff4fa0;
+}
+
+h2{
+  font-size:3rem;
+  color:#ff7ac8;
+  text-shadow:
+  0 0 20px #ff4fa0;
+}
+
+/* Month Scroll */
+.month-list{
+  height:320px;
+  overflow:hidden;
+  font-size:2rem;
+}
+
+.month-list div{
+  padding:12px;
+  opacity:0.4;
+}
+
+.active-month{
+  color:#ff7ac8;
+  font-size:3rem;
+  opacity:1 !important;
+  font-weight:bold;
+  text-shadow:
+  0 0 20px #ff4fa0,
+  0 0 40px #ff4fa0;
+}
+
+/* Date */
+.big-date{
+  font-size:9rem;
+  color:#ff7ac8;
+  font-weight:bold;
+  text-shadow:
+  0 0 25px #ff4fa0,
+  0 0 60px #ff4fa0;
+}
+
+/* Gallery */
+.gallery-grid{
+  width:100%;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:10px;
+}
+
+.gallery-grid img{
+  width:100%;
+  aspect-ratio:1;
+  object-fit:cover;
+  border-radius:20px;
+  border:2px solid #ff7ac8;
+  box-shadow:
+  0 0 15px #ff4fa0;
+}
+
+/* Final Message */
+#final p{
+  margin-top:15px;
+  font-size:1.5rem;
+  color:#ffd6ea;
+}
+
+/* Mobile */
+@media(max-width:600px){
+
+  h1{
+    font-size:2.3rem;
+  }
+
+  h2{
+    font-size:2.5rem;
+  }
+
+  .big-date{
+    font-size:7rem;
+  }
+
+  .month-list{
+    font-size:1.5rem;
+  }
+
+  .active-month{
+    font-size:2.2rem;
+  }
+
+}
